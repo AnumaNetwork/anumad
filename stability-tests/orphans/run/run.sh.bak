@@ -1,0 +1,25 @@
+#!/bin/bash
+rm -rf /tmp/anumad-temp
+
+anumad --simnet --appdir=/tmp/anumad-temp --profile=6061 &
+anumad_PID=$!
+
+sleep 1
+
+orphans --simnet -alocalhost:12613 -n20 --profile=7000
+TEST_EXIT_CODE=$?
+
+kill $anumad_PID
+
+wait $anumad_PID
+anumad_EXIT_CODE=$?
+
+echo "Exit code: $TEST_EXIT_CODE"
+echo "anumad exit code: $anumad_EXIT_CODE"
+
+if [ $TEST_EXIT_CODE -eq 0 ] && [ $anumad_EXIT_CODE -eq 0 ]; then
+  echo "orphans test: PASSED"
+  exit 0
+fi
+echo "orphans test: FAILED"
+exit 1
