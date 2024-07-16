@@ -5,7 +5,7 @@
 package dagconfig
 
 import (
-	"github.com/AnumaNetwork/go-muhash"
+	"github.com/kaspanet/go-muhash"
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/blockheader"
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/subnetworks"
