@@ -13,7 +13,7 @@ Anuma is an attempt at a proof-of-work cryptocurrency with instant confirmations
 
 ## Requirements
 
-Go 1.18 or later.
+Go 1.19 or later.
 
 ## Installation
 
