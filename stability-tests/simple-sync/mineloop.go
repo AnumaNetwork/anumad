@@ -3,7 +3,7 @@ package main
 import (
 	"time"
 
-	"github.com/AnumaNetwork/go-secp256k1"
+	"github.com/kaspanet/go-secp256k1"
 	"github.com/AnumaNetwork/anumad/app/appmessage"
 	"github.com/AnumaNetwork/anumad/stability-tests/common"
 	"github.com/AnumaNetwork/anumad/stability-tests/common/rpc"

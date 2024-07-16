@@ -5,7 +5,7 @@
 package txscript
 
 import (
-	"github.com/AnumaNetwork/go-secp256k1"
+	"github.com/kaspanet/go-secp256k1"
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/consensushashing"
 	"github.com/pkg/errors"

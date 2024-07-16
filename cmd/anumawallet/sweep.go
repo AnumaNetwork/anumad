@@ -5,7 +5,7 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"github.com/AnumaNetwork/go-secp256k1"
+	"github.com/kaspanet/go-secp256k1"
 	"github.com/AnumaNetwork/anumad/cmd/anumawallet/daemon/client"
 	"github.com/AnumaNetwork/anumad/cmd/anumawallet/daemon/pb"
 	"github.com/AnumaNetwork/anumad/cmd/anumawallet/libanumawallet"

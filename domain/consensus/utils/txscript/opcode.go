@@ -17,7 +17,7 @@ import (
 
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/constants"
 
-	"github.com/AnumaNetwork/go-secp256k1"
+	"github.com/kaspanet/go-secp256k1"
 )
 
 // An opcode defines the information related to a txscript opcode. opfunc, if
