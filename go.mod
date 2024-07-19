@@ -24,7 +24,7 @@ require (
 )
 
 require (
-	github.com/btcsuite/btcd v0.20.1-beta // indirect
+	github.com/btcsuite/btcd v0.23.2 // indirect
 	github.com/golang/snappy v0.0.4 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.8 // indirect
 	golang.org/x/net v0.27.0 // indirect
