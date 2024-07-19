@@ -2,7 +2,7 @@ package daawindowstore
 
 import (
 	"encoding/binary"
-	"github.com/golang/protobuf/proto"
+	"google.golang.org/protobuf/proto"
 	"github.com/AnumaNetwork/anumad/domain/consensus/database/serialization"
 	"github.com/AnumaNetwork/anumad/domain/consensus/model"
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
