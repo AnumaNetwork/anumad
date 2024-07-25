@@ -11,7 +11,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        branch: [ master]
+        branch: [ master, latest ]
     name: Race detection on ${{ matrix.branch }}
     steps:
       - name: Check out code into the Go module directory
@@ -30,6 +30,9 @@ jobs:
         run: |
           if [ "${{ matrix.branch }}" == "master" ]; then
             echo "run_on=master" >> $GITHUB_ENV
+          fi
+          if [ "${{ matrix.branch }}" == "latest" ]; then
+            echo "run_on=dev" >> $GITHUB_ENV
           fi
 
       - name: Set manual branch name
