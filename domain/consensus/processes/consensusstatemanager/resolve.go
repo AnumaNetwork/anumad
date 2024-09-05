@@ -1,12 +1,13 @@
 package consensusstatemanager
 
 import (
+	"sort"
+
 	"github.com/AnumaNetwork/anumad/domain/consensus/model"
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
 	"github.com/AnumaNetwork/anumad/infrastructure/logger"
 	"github.com/AnumaNetwork/anumad/util/staging"
 	"github.com/pkg/errors"
-	"sort"
 )
 
 // tipsInDecreasingGHOSTDAGParentSelectionOrder returns the current DAG tips in decreasing parent selection order.

@@ -1,10 +1,11 @@
 package hashes
 
 import (
+	"hash"
+
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
 	"github.com/pkg/errors"
 	"golang.org/x/crypto/sha3"
-	"hash"
 )
 
 // HashWriter is used to incrementally hash data without concatenating all of the data to a single buffer

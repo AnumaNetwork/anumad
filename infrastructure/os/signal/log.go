@@ -8,4 +8,4 @@ import (
 	"github.com/AnumaNetwork/anumad/infrastructure/logger"
 )
 
-var anumadLog = logger.RegisterSubSystem("ANUMD")
+var bgadLog = logger.RegisterSubSystem("ANUMD")

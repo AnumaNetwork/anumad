@@ -2,11 +2,12 @@ package common
 
 import (
 	"fmt"
-	"github.com/AnumaNetwork/anumad/domain/dagconfig"
 	"os"
 	"sync/atomic"
 	"syscall"
 	"testing"
+
+	"github.com/AnumaNetwork/anumad/domain/dagconfig"
 )
 
 // RunAnumadForTesting runs anumad for testing purposes

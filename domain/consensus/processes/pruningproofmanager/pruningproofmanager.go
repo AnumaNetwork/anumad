@@ -1,6 +1,8 @@
 package pruningproofmanager
 
 import (
+	"math/big"
+
 	consensusDB "github.com/AnumaNetwork/anumad/domain/consensus/database"
 	"github.com/AnumaNetwork/anumad/domain/consensus/datastructures/blockheaderstore"
 	"github.com/AnumaNetwork/anumad/domain/consensus/datastructures/blockrelationstore"
@@ -19,7 +21,6 @@ import (
 	"github.com/AnumaNetwork/anumad/infrastructure/logger"
 	"github.com/AnumaNetwork/anumad/util/staging"
 	"github.com/pkg/errors"
-	"math/big"
 )
 
 type pruningProofManager struct {

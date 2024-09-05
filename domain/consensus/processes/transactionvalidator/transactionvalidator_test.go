@@ -1,7 +1,6 @@
 package transactionvalidator_test
 
 import (
-	"github.com/kaspanet/go-secp256k1"
 	"github.com/AnumaNetwork/anumad/domain/consensus"
 	"github.com/AnumaNetwork/anumad/domain/consensus/ruleerrors"
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/consensushashing"
@@ -9,6 +8,7 @@ import (
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/txscript"
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/utxo"
 	"github.com/AnumaNetwork/anumad/util"
+	"github.com/kaspanet/go-secp256k1"
 
 	"testing"
 

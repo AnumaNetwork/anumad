@@ -6,7 +6,7 @@ ANUMAD_PID=$!
 
 sleep 1
 
-infra-level-garbage --devnet -alocalhost:12713 -m messages.dat --profile=7000
+infra-level-garbage --devnet -alocalhost:16611 -m messages.dat --profile=7000
 TEST_EXIT_CODE=$?
 
 kill $ANUMAD_PID

@@ -1,6 +1,8 @@
 package pruningmanager
 
 import (
+	"sort"
+
 	"github.com/AnumaNetwork/anumad/domain/consensus/model"
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/consensushashing"
@@ -11,7 +13,6 @@ import (
 	"github.com/AnumaNetwork/anumad/infrastructure/logger"
 	"github.com/AnumaNetwork/anumad/util/staging"
 	"github.com/pkg/errors"
-	"sort"
 )
 
 // pruningManager resolves and manages the current pruning point

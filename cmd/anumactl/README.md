@@ -32,10 +32,10 @@ $ go install .
 
 ## Usage
 
-The full anumactl configuration options can be seen with:
+The full kaspctl configuration options can be seen with:
 
 ```bash
-$ anumactl --help
+$ kaspctl --help
 ```
 
 But the minimum configuration needed to run it is:

@@ -3,10 +3,11 @@ package pow
 import (
 	"bytes"
 	"encoding/hex"
-	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
-	"github.com/AnumaNetwork/anumad/domain/consensus/utils/hashes"
 	"math/rand"
 	"testing"
+
+	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
+	"github.com/AnumaNetwork/anumad/domain/consensus/utils/hashes"
 )
 
 func BenchmarkMatrix_HeavyHash(b *testing.B) {

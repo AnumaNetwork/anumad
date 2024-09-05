@@ -1,8 +1,9 @@
 package integration
 
 import (
-	"github.com/AnumaNetwork/anumad/app/appmessage"
 	"testing"
+
+	"github.com/AnumaNetwork/anumad/app/appmessage"
 )
 
 func TestVirtualSelectedParentBlueScoreAndVirtualDAAScore(t *testing.T) {

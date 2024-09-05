@@ -2,6 +2,7 @@ package subnetworks
 
 import (
 	"bytes"
+
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
 )
 

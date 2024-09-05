@@ -4,6 +4,7 @@ import (
 	// we need to embed the utxoset of mainnet genesis here
 	_ "embed"
 	"fmt"
+
 	"github.com/AnumaNetwork/anumad/domain/consensus/model"
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
 	"github.com/AnumaNetwork/anumad/domain/consensus/ruleerrors"

@@ -2,6 +2,7 @@ package headersselectedchainstore
 
 import (
 	"encoding/binary"
+
 	"github.com/AnumaNetwork/anumad/util/staging"
 
 	"github.com/AnumaNetwork/anumad/domain/consensus/database"

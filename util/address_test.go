@@ -7,10 +7,11 @@ package util_test
 import (
 	"bytes"
 	"fmt"
-	"golang.org/x/crypto/blake2b"
 	"reflect"
 	"strings"
 	"testing"
+
+	"golang.org/x/crypto/blake2b"
 
 	"github.com/AnumaNetwork/anumad/util"
 )

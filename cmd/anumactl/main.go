@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
-	"github.com/AnumaNetwork/anumad/version"
 	"os"
 	"time"
+
+	"github.com/AnumaNetwork/anumad/version"
 
 	"github.com/AnumaNetwork/anumad/infrastructure/network/netadapter/server/grpcserver/protowire"
 

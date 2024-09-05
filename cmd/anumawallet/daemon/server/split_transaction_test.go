@@ -3,6 +3,7 @@ package server
 import (
 	"testing"
 
+	"github.com/AnumaNetwork/anumad/cmd/anumawallet/libanumawallet"
 	"github.com/AnumaNetwork/anumad/cmd/anumawallet/libanumawallet/serialization"
 
 	"github.com/AnumaNetwork/anumad/cmd/anumawallet/keys"
@@ -15,7 +16,6 @@ import (
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/txscript"
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/utxo"
 
-	"github.com/AnumaNetwork/anumad/cmd/anumawallet/libanumawallet"
 	"github.com/AnumaNetwork/anumad/domain/consensus"
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/testutils"
 )

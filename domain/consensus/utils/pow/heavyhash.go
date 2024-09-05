@@ -1,9 +1,10 @@
 package pow
 
 import (
+	"math"
+
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/hashes"
-	"math"
 )
 
 const eps float64 = 1e-9

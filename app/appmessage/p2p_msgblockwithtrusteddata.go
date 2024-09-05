@@ -1,8 +1,9 @@
 package appmessage
 
 import (
-	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
 	"math/big"
+
+	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
 )
 
 // MsgBlockWithTrustedData represents a anuma BlockWithTrustedData message

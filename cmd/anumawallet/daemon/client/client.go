@@ -2,8 +2,9 @@ package client
 
 import (
 	"context"
-	"github.com/AnumaNetwork/anumad/cmd/anumawallet/daemon/server"
 	"time"
+
+	"github.com/AnumaNetwork/anumad/cmd/anumawallet/daemon/server"
 
 	"github.com/pkg/errors"
 

@@ -16,8 +16,8 @@ import (
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/subnetworks"
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/transactionid"
 
-	"github.com/davecgh/go-spew/spew"
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
+	"github.com/davecgh/go-spew/spew"
 )
 
 // TestTx tests the MsgTx API.

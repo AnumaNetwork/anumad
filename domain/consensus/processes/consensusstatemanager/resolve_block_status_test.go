@@ -2,8 +2,9 @@ package consensusstatemanager_test
 
 import (
 	"errors"
-	"github.com/AnumaNetwork/anumad/domain/consensus/utils/utxo"
 	"testing"
+
+	"github.com/AnumaNetwork/anumad/domain/consensus/utils/utxo"
 
 	"github.com/AnumaNetwork/anumad/domain/consensus/model"
 

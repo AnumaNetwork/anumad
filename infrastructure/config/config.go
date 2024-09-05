@@ -18,13 +18,14 @@ import (
 
 	"github.com/btcsuite/go-socks/socks"
 	"github.com/jessevdk/go-flags"
+	"github.com/pkg/errors"
+
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
 	"github.com/AnumaNetwork/anumad/domain/dagconfig"
 	"github.com/AnumaNetwork/anumad/infrastructure/logger"
 	"github.com/AnumaNetwork/anumad/util"
 	"github.com/AnumaNetwork/anumad/util/network"
 	"github.com/AnumaNetwork/anumad/version"
-	"github.com/pkg/errors"
 )
 
 const (
@@ -33,7 +34,7 @@ const (
 	defaultLogDirname          = "logs"
 	defaultLogFilename         = "anumad.log"
 	defaultErrLogFilename      = "anumad_err.log"
-	defaultTargetOutboundPeers = 8
+	defaultTargetOutboundPeers = 1
 	defaultMaxInboundPeers     = 117
 	defaultBanDuration         = time.Hour * 24
 	defaultBanThreshold        = 100
@@ -84,14 +85,14 @@ type Flags struct {
 	AddPeers                        []string      `short:"a" long:"addpeer" description:"Add a peer to connect with at startup"`
 	ConnectPeers                    []string      `long:"connect" description:"Connect only to the specified peers at startup"`
 	DisableListen                   bool          `long:"nolisten" description:"Disable listening for incoming connections -- NOTE: Listening is automatically disabled if the --connect or --proxy options are used without also specifying listen interfaces via --listen"`
-	Listeners                       []string      `long:"listen" description:"Add an interface/port to listen for connections (default all interfaces port: 12413, testnet: 12513)"`
+	Listeners                       []string      `long:"listen" description:"Add an interface/port to listen for connections (default all interfaces port: 17111, testnet: 17211)"`
 	TargetOutboundPeers             int           `long:"outpeers" description:"Target number of outbound peers"`
 	MaxInboundPeers                 int           `long:"maxinpeers" description:"Max number of inbound peers"`
 	EnableBanning                   bool          `long:"enablebanning" description:"Enable banning of misbehaving peers"`
 	BanDuration                     time.Duration `long:"banduration" description:"How long to ban misbehaving peers. Valid time units are {s, m, h}. Minimum 1 second"`
 	BanThreshold                    uint32        `long:"banthreshold" description:"Maximum allowed ban score before disconnecting and banning misbehaving peers."`
 	Whitelists                      []string      `long:"whitelist" description:"Add an IP network or IP that will not be banned. (eg. 192.168.1.0/24 or ::1)"`
-	RPCListeners                    []string      `long:"rpclisten" description:"Add an interface/port to listen for RPC connections (default port: 12412, testnet: 12512)"`
+	RPCListeners                    []string      `long:"rpclisten" description:"Add an interface/port to listen for RPC connections (default port: 17110, testnet: 17210)"`
 	RPCCert                         string        `long:"rpccert" description:"File containing the certificate file"`
 	RPCKey                          string        `long:"rpckey" description:"File containing the certificate key"`
 	RPCMaxClients                   int           `long:"rpcmaxclients" description:"Max number of RPC clients for standard connections"`
@@ -126,6 +127,7 @@ type Flags struct {
 	AllowSubmitBlockWhenNotSynced   bool          `long:"allow-submit-block-when-not-synced" hidden:"true" description:"Allow the node to accept blocks from RPC while not synced (this flag is mainly used for testing)"`
 	EnableSanityCheckPruningUTXOSet bool          `long:"enable-sanity-check-pruning-utxo" hidden:"true" description:"When moving the pruning point - check that the utxo set matches the utxo commitment"`
 	ProtocolVersion                 uint32        `long:"protocol-version" description:"Use non default p2p protocol version"`
+	LaunchDate                      time.Time
 	NetworkFlags
 	ServiceOptions *ServiceOptions
 }
@@ -572,6 +574,9 @@ func LoadConfig() (*Config, error) {
 	if configFileError != nil {
 		log.Warnf("%s", configFileError)
 	}
+
+	cfg.LaunchDate = time.Date(2024, 03, 14, 15, 0, 0, 0, time.UTC)
+
 	return cfg, nil
 }
 

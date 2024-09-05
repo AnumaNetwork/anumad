@@ -6,11 +6,12 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
-	"github.com/gofrs/flock"
 	"os"
 	"path/filepath"
 	"runtime"
 	"strings"
+
+	"github.com/gofrs/flock"
 
 	"github.com/AnumaNetwork/anumad/cmd/anumawallet/utils"
 

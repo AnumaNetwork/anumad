@@ -1,11 +1,12 @@
 package difficultymanager
 
 import (
+	"math"
+	"math/big"
+
 	"github.com/AnumaNetwork/anumad/domain/consensus/model"
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
 	"github.com/AnumaNetwork/anumad/util/difficulty"
-	"math"
-	"math/big"
 )
 
 type difficultyBlock struct {

@@ -1,9 +1,10 @@
 package blockheader
 
 import (
+	"math/big"
+
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/pow"
-	"math/big"
 )
 
 type blockHeader struct {

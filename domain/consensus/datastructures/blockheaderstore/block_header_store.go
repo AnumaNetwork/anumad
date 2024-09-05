@@ -1,12 +1,12 @@
 package blockheaderstore
 
 import (
-	"github.com/golang/protobuf/proto"
 	"github.com/AnumaNetwork/anumad/domain/consensus/database/serialization"
 	"github.com/AnumaNetwork/anumad/domain/consensus/model"
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/lrucache"
 	"github.com/AnumaNetwork/anumad/util/staging"
+	"github.com/golang/protobuf/proto"
 )
 
 var bucketName = []byte("block-headers")

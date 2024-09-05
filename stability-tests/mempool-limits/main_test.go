@@ -1,12 +1,13 @@
 package mempoollimits
 
 import (
+	"os"
+	"testing"
+
 	"github.com/AnumaNetwork/anumad/infrastructure/network/rpcclient"
 	"github.com/AnumaNetwork/anumad/stability-tests/common"
 	"github.com/AnumaNetwork/anumad/util/panics"
 	"github.com/AnumaNetwork/anumad/util/profiling"
-	"os"
-	"testing"
 )
 
 const (

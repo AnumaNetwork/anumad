@@ -7,6 +7,7 @@ package txscript_test
 import (
 	"encoding/hex"
 	"fmt"
+
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
 
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/txscript"

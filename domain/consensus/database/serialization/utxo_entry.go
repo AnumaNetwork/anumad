@@ -1,10 +1,11 @@
 package serialization
 
 import (
+	"math"
+
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/utxo"
 	"github.com/pkg/errors"
-	"math"
 )
 
 // ScriptPublicKeyToDBScriptPublicKey converts ScriptPublicKey to DBScriptPublicKey

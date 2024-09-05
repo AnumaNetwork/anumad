@@ -5,9 +5,10 @@
 package util_test
 
 import (
-	"github.com/AnumaNetwork/anumad/domain/consensus/utils/constants"
 	"math"
 	"testing"
+
+	"github.com/AnumaNetwork/anumad/domain/consensus/utils/constants"
 
 	. "github.com/AnumaNetwork/anumad/util"
 )

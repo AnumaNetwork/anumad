@@ -6,7 +6,6 @@ import (
 
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/utxo"
 
-	"github.com/kaspanet/go-secp256k1"
 	"github.com/AnumaNetwork/anumad/app/appmessage"
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/consensushashing"
@@ -14,6 +13,7 @@ import (
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/transactionid"
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/txscript"
 	"github.com/AnumaNetwork/anumad/util"
+	"github.com/kaspanet/go-secp256k1"
 )
 
 func TestUTXOIndex(t *testing.T) {
@@ -88,8 +88,8 @@ func TestUTXOIndex(t *testing.T) {
 	// Submit a few transactions that spends some UTXOs
 	const transactionAmountToSpend = 5
 	for i := 0; i < transactionAmountToSpend; i++ {
-		rpcTransaction, transactionID := buildTransactionForUTXOIndexTest(t, notificationEntries[i])
-		_, err = anumad.rpcClient.SubmitTransaction(rpcTransaction, transactionID, false)
+		rpcTransaction := buildTransactionForUTXOIndexTest(t, notificationEntries[i])
+		_, err = anumad.rpcClient.SubmitTransaction(rpcTransaction, false)
 		if err != nil {
 			t.Fatalf("Error submitting transaction: %s", err)
 		}
@@ -171,7 +171,7 @@ func TestUTXOIndex(t *testing.T) {
 	}
 }
 
-func buildTransactionForUTXOIndexTest(t *testing.T, entry *appmessage.UTXOsByAddressesEntry) (*appmessage.RPCTransaction, string) {
+func buildTransactionForUTXOIndexTest(t *testing.T, entry *appmessage.UTXOsByAddressesEntry) *appmessage.RPCTransaction {
 	transactionIDBytes, err := hex.DecodeString(entry.Outpoint.TransactionID)
 	if err != nil {
 		t.Fatalf("Error decoding transaction ID: %s", err)
@@ -224,5 +224,5 @@ func buildTransactionForUTXOIndexTest(t *testing.T, entry *appmessage.UTXOsByAdd
 	msgTx.TxIn[0].SignatureScript = signatureScript
 
 	domainTransaction := appmessage.MsgTxToDomainTransaction(msgTx)
-	return appmessage.DomainTransactionToRPCTransaction(domainTransaction), consensushashing.TransactionID(domainTransaction).String()
+	return appmessage.DomainTransactionToRPCTransaction(domainTransaction)
 }

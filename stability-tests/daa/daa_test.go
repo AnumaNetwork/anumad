@@ -1,17 +1,18 @@
 package daa
 
 import (
+	"math"
+	"math/rand"
+	"os"
+	"testing"
+	"time"
+
 	"github.com/AnumaNetwork/anumad/app/appmessage"
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/pow"
 	"github.com/AnumaNetwork/anumad/domain/dagconfig"
 	"github.com/AnumaNetwork/anumad/infrastructure/network/rpcclient"
 	"github.com/AnumaNetwork/anumad/stability-tests/common"
-	"math"
-	"math/rand"
-	"os"
-	"testing"
-	"time"
 )
 
 const rpcAddress = "localhost:9000"

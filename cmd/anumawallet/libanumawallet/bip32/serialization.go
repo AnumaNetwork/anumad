@@ -2,8 +2,9 @@ package bip32
 
 import (
 	"encoding/binary"
-	"github.com/kaspanet/go-secp256k1"
+
 	"github.com/AnumaNetwork/anumad/cmd/anumawallet/libanumawallet/bip32/base58"
+	"github.com/kaspanet/go-secp256k1"
 	"github.com/pkg/errors"
 )
 

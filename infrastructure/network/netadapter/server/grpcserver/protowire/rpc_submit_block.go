@@ -1,9 +1,10 @@
 package protowire
 
 import (
+	"math"
+
 	"github.com/AnumaNetwork/anumad/app/appmessage"
 	"github.com/pkg/errors"
-	"math"
 )
 
 func (x *AnumadMessage_SubmitBlockRequest) toAppMessage() (appmessage.Message, error) {

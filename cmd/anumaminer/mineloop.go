@@ -2,10 +2,11 @@ package main
 
 import (
 	nativeerrors "errors"
-	"github.com/AnumaNetwork/anumad/version"
 	"math/rand"
 	"sync/atomic"
 	"time"
+
+	"github.com/AnumaNetwork/anumad/version"
 
 	"github.com/AnumaNetwork/anumad/app/appmessage"
 	"github.com/AnumaNetwork/anumad/cmd/anumaminer/templatemanager"

@@ -5,7 +5,6 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/kaspanet/go-secp256k1"
 	"github.com/AnumaNetwork/anumad/app/appmessage"
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/consensushashing"
@@ -18,6 +17,7 @@ import (
 	"github.com/AnumaNetwork/anumad/infrastructure/network/rpcclient"
 	"github.com/AnumaNetwork/anumad/stability-tests/common/mine"
 	"github.com/AnumaNetwork/anumad/util"
+	"github.com/kaspanet/go-secp256k1"
 )
 
 const (
@@ -86,7 +86,7 @@ func submitAnAmountOfTransactionsToTheMempool(t *testing.T, rpcClient *rpcclient
 
 	for i, transaction := range transactions {
 		rpcTransaction := appmessage.DomainTransactionToRPCTransaction(transaction)
-		_, err := rpcClient.SubmitTransaction(rpcTransaction, consensushashing.TransactionID(transaction).String(), false)
+		_, err := rpcClient.SubmitTransaction(rpcTransaction, false)
 		if err != nil {
 			if ignoreOrphanRejects && strings.Contains(err.Error(), "orphan") {
 				continue

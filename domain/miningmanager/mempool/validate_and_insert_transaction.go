@@ -2,6 +2,7 @@ package mempool
 
 import (
 	"fmt"
+
 	"github.com/AnumaNetwork/anumad/infrastructure/logger"
 
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"

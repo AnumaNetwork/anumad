@@ -8,9 +8,9 @@ import (
 	"os"
 	"time"
 
-	"github.com/jessevdk/go-flags"
 	"github.com/AnumaNetwork/anumad/domain/dagconfig"
 	"github.com/AnumaNetwork/anumad/util/difficulty"
+	"github.com/jessevdk/go-flags"
 	"github.com/pkg/errors"
 )
 

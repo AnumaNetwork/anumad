@@ -1,13 +1,14 @@
 package blocktemplatebuilder
 
 import (
+	"math"
+	"sort"
+
 	"github.com/AnumaNetwork/anumad/domain/consensus/processes/coinbasemanager"
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/merkle"
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/transactionhelper"
 	"github.com/AnumaNetwork/anumad/domain/consensusreference"
 	"github.com/AnumaNetwork/anumad/util/mstime"
-	"math"
-	"sort"
 
 	"github.com/AnumaNetwork/anumad/util/difficulty"
 

@@ -5,11 +5,12 @@
 package addressmanager
 
 import (
-	"github.com/AnumaNetwork/anumad/infrastructure/db/database"
-	"github.com/AnumaNetwork/anumad/util/mstime"
 	"net"
 	"sync"
 	"time"
+
+	"github.com/AnumaNetwork/anumad/infrastructure/db/database"
+	"github.com/AnumaNetwork/anumad/util/mstime"
 
 	"github.com/AnumaNetwork/anumad/app/appmessage"
 	"github.com/pkg/errors"

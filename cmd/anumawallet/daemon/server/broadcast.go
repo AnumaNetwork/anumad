@@ -9,7 +9,6 @@ import (
 	"github.com/AnumaNetwork/anumad/cmd/anumawallet/libanumawallet"
 	"github.com/AnumaNetwork/anumad/cmd/anumawallet/libanumawallet/serialization"
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
-	"github.com/AnumaNetwork/anumad/domain/consensus/utils/consensushashing"
 	"github.com/AnumaNetwork/anumad/infrastructure/network/rpcclient"
 	"github.com/pkg/errors"
 )
@@ -56,12 +55,16 @@ func (s *server) broadcast(transactions [][]byte, isDomain bool) ([]string, erro
 		}
 	}
 
-	s.forceSync()
+	err = s.refreshUTXOs()
+	if err != nil {
+		return nil, err
+	}
+
 	return txIDs, nil
 }
 
 func sendTransaction(client *rpcclient.RPCClient, tx *externalapi.DomainTransaction) (string, error) {
-	submitTransactionResponse, err := client.SubmitTransaction(appmessage.DomainTransactionToRPCTransaction(tx), consensushashing.TransactionID(tx).String(), false)
+	submitTransactionResponse, err := client.SubmitTransaction(appmessage.DomainTransactionToRPCTransaction(tx), false)
 	if err != nil {
 		return "", errors.Wrapf(err, "error submitting transaction")
 	}

@@ -1,8 +1,9 @@
 package blockbuilder_test
 
 import (
-	"github.com/pkg/errors"
 	"testing"
+
+	"github.com/pkg/errors"
 
 	"github.com/AnumaNetwork/anumad/domain/consensus"
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"

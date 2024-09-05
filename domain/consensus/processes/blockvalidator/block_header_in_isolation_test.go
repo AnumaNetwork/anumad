@@ -1,10 +1,11 @@
 package blockvalidator_test
 
 import (
-	"github.com/AnumaNetwork/anumad/domain/consensus/model/testapi"
 	"reflect"
 	"runtime"
 	"testing"
+
+	"github.com/AnumaNetwork/anumad/domain/consensus/model/testapi"
 
 	"github.com/AnumaNetwork/anumad/domain/consensus"
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"

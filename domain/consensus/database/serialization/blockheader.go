@@ -1,11 +1,12 @@
 package serialization
 
 import (
+	"math"
+	"math/big"
+
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/blockheader"
 	"github.com/pkg/errors"
-	"math"
-	"math/big"
 )
 
 // DomainBlockHeaderToDbBlockHeader converts BlockHeader to DbBlockHeader

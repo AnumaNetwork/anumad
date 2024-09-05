@@ -2,9 +2,10 @@ package util_test
 
 import (
 	"fmt"
-	"github.com/AnumaNetwork/anumad/util/difficulty"
 	"math"
 	"math/big"
+
+	"github.com/AnumaNetwork/anumad/util/difficulty"
 
 	"github.com/AnumaNetwork/anumad/util"
 )

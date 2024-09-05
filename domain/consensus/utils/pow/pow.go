@@ -7,8 +7,9 @@ import (
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/serialization"
 	"github.com/AnumaNetwork/anumad/util/difficulty"
 
-	"github.com/pkg/errors"
 	"math/big"
+
+	"github.com/pkg/errors"
 )
 
 // State is an intermediate data structure with pre-computed values to speed up mining.

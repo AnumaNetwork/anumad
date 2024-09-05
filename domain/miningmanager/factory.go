@@ -1,12 +1,13 @@
 package miningmanager
 
 import (
+	"sync"
+	"time"
+
 	"github.com/AnumaNetwork/anumad/domain/consensusreference"
 	"github.com/AnumaNetwork/anumad/domain/dagconfig"
 	"github.com/AnumaNetwork/anumad/domain/miningmanager/blocktemplatebuilder"
 	mempoolpkg "github.com/AnumaNetwork/anumad/domain/miningmanager/mempool"
-	"sync"
-	"time"
 )
 
 // Factory instantiates new mining managers

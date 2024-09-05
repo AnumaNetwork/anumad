@@ -2,6 +2,7 @@ package server
 
 import (
 	"context"
+
 	"github.com/AnumaNetwork/anumad/cmd/anumawallet/daemon/pb"
 )
 

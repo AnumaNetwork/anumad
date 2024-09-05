@@ -1,10 +1,11 @@
 package protowire
 
 import (
+	"math/big"
+
 	"github.com/AnumaNetwork/anumad/app/appmessage"
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
 	"github.com/pkg/errors"
-	"math/big"
 )
 
 func (x *AnumadMessage_BlockWithTrustedData) toAppMessage() (appmessage.Message, error) {

@@ -1,13 +1,14 @@
 package blockprocessor_test
 
 import (
+	"math"
+	"testing"
+	"time"
+
 	"github.com/AnumaNetwork/anumad/domain/consensus/model"
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/constants"
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/txscript"
 	"github.com/AnumaNetwork/anumad/domain/dagconfig"
-	"math"
-	"testing"
-	"time"
 
 	"github.com/AnumaNetwork/anumad/domain/consensus"
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"

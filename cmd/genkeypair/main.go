@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+
 	"github.com/AnumaNetwork/anumad/cmd/anumawallet/libanumawallet"
 	"github.com/AnumaNetwork/anumad/util"
 )

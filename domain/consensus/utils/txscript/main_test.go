@@ -1,9 +1,10 @@
 package txscript
 
 import (
-	"github.com/AnumaNetwork/anumad/infrastructure/logger"
 	"os"
 	"testing"
+
+	"github.com/AnumaNetwork/anumad/infrastructure/logger"
 )
 
 func TestMain(m *testing.M) {

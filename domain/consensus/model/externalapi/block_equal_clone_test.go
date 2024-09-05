@@ -1,11 +1,12 @@
 package externalapi_test
 
 import (
-	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
-	"github.com/AnumaNetwork/anumad/domain/consensus/utils/blockheader"
 	"math/big"
 	"reflect"
 	"testing"
+
+	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
+	"github.com/AnumaNetwork/anumad/domain/consensus/utils/blockheader"
 )
 
 type blockToCompare struct {

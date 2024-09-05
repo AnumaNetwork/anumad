@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
+
 	"github.com/AnumaNetwork/anumad/cmd/anumawallet/daemon/client"
 	"github.com/AnumaNetwork/anumad/cmd/anumawallet/daemon/pb"
 )

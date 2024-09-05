@@ -2,11 +2,12 @@ package pruningmanager_test
 
 import (
 	"encoding/json"
-	"github.com/AnumaNetwork/anumad/infrastructure/db/database"
 	"os"
 	"path/filepath"
 	"testing"
 	"time"
+
+	"github.com/AnumaNetwork/anumad/infrastructure/db/database"
 
 	"github.com/AnumaNetwork/anumad/domain/consensus/model"
 

@@ -10,7 +10,6 @@ import (
 
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/utxo"
 
-	"github.com/kaspanet/go-secp256k1"
 	"github.com/AnumaNetwork/anumad/app/appmessage"
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/consensushashing"
@@ -18,6 +17,7 @@ import (
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/transactionhelper"
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/txscript"
 	"github.com/AnumaNetwork/anumad/util"
+	"github.com/kaspanet/go-secp256k1"
 )
 
 func TestTxRelay(t *testing.T) {
@@ -53,7 +53,7 @@ func TestTxRelay(t *testing.T) {
 	msgTx := generateTx(t, secondBlock.Transactions[transactionhelper.CoinbaseTransactionIndex], payer, payee)
 	domainTransaction := appmessage.MsgTxToDomainTransaction(msgTx)
 	rpcTransaction := appmessage.DomainTransactionToRPCTransaction(domainTransaction)
-	response, err := payer.rpcClient.SubmitTransaction(rpcTransaction, consensushashing.TransactionID(domainTransaction).String(), false)
+	response, err := payer.rpcClient.SubmitTransaction(rpcTransaction, false)
 	if err != nil {
 		t.Fatalf("Error submitting transaction: %+v", err)
 	}

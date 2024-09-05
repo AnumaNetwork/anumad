@@ -2,8 +2,8 @@ package utils
 
 import "testing"
 
-// Takes in a string representation of the Anum value to convert to Sompi
-func TestAnumToSompi(t *testing.T) {
+// Takes in a string representation of the Sec value to convert to Sompi
+func TestSecToSompi(t *testing.T) {
 	type testVector struct {
 		originalAmount  string
 		convertedAmount uint64
@@ -18,7 +18,7 @@ func TestAnumToSompi(t *testing.T) {
 	}
 
 	for _, currentTestVector := range validCases {
-		convertedAmount, err := AnumToSompi(currentTestVector.originalAmount)
+		convertedAmount, err := SecToSompi(currentTestVector.originalAmount)
 
 		if err != nil {
 			t.Error(err)
@@ -35,7 +35,7 @@ func TestAnumToSompi(t *testing.T) {
 	}
 
 	for _, currentTestVector := range invalidCases {
-		_, err := AnumToSompi(currentTestVector)
+		_, err := SecToSompi(currentTestVector)
 
 		if err == nil {
 			t.Errorf("Expected an error but succeeded validation for test case %s", currentTestVector)

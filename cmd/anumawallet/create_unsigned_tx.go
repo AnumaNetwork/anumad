@@ -20,7 +20,7 @@ func createUnsignedTransaction(conf *createUnsignedTransactionConfig) error {
 	ctx, cancel := context.WithTimeout(context.Background(), daemonTimeout)
 	defer cancel()
 
-	sendAmountSompi, err := utils.AnumToSompi(conf.SendAmount)
+	sendAmountSompi, err := utils.SecToSompi(conf.SendAmount)
 
 	if err != nil {
 		return err

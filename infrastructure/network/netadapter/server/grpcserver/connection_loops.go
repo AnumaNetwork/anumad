@@ -1,14 +1,15 @@
 package grpcserver
 
 import (
-	"github.com/davecgh/go-spew/spew"
-	"github.com/AnumaNetwork/anumad/app/appmessage"
-	"github.com/AnumaNetwork/anumad/infrastructure/logger"
 	"io"
 	"os"
 	"strconv"
 	"sync"
 	"time"
+
+	"github.com/AnumaNetwork/anumad/app/appmessage"
+	"github.com/AnumaNetwork/anumad/infrastructure/logger"
+	"github.com/davecgh/go-spew/spew"
 
 	routerpkg "github.com/AnumaNetwork/anumad/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"

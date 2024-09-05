@@ -2,6 +2,7 @@ package blockvalidator
 
 import (
 	"fmt"
+
 	"github.com/AnumaNetwork/anumad/domain/consensus/model"
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
 	"github.com/AnumaNetwork/anumad/domain/consensus/ruleerrors"

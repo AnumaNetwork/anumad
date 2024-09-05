@@ -13,7 +13,7 @@ trap "killAnumadIfNotKilled" EXIT
 
 sleep 1
 
-application-level-garbage --devnet -alocalhost:12713 -b blocks.dat --profile=7000
+application-level-garbage --devnet -alocalhost:16611 -b blocks.dat --profile=7000
 TEST_EXIT_CODE=$?
 
 kill $ANUMAD_PID

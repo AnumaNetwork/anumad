@@ -1,9 +1,10 @@
 package reachabilitymanager
 
 import (
+	"math"
+
 	"github.com/AnumaNetwork/anumad/domain/consensus/model"
 	"github.com/pkg/errors"
-	"math"
 )
 
 func newReachabilityInterval(start uint64, end uint64) *model.ReachabilityInterval {

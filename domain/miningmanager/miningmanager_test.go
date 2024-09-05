@@ -1,14 +1,15 @@
 package miningmanager_test
 
 import (
+	"reflect"
+	"strings"
+	"testing"
+
 	"github.com/AnumaNetwork/anumad/cmd/anumawallet/libanumawallet"
 	"github.com/AnumaNetwork/anumad/domain/consensusreference"
 	"github.com/AnumaNetwork/anumad/domain/miningmanager/model"
 	"github.com/AnumaNetwork/anumad/util"
 	"github.com/AnumaNetwork/anumad/version"
-	"reflect"
-	"strings"
-	"testing"
 
 	"github.com/AnumaNetwork/anumad/domain/miningmanager/mempool"
 

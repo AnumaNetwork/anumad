@@ -2,10 +2,6 @@ package main
 
 import (
 	"fmt"
-	"github.com/kaspanet/go-secp256k1"
-	"github.com/AnumaNetwork/anumad/app/appmessage"
-	"github.com/AnumaNetwork/anumad/domain/consensus/utils/mining"
-	"github.com/AnumaNetwork/anumad/util"
 	"math/rand"
 	"os"
 	"os/exec"
@@ -14,6 +10,11 @@ import (
 	"sync/atomic"
 	"syscall"
 	"time"
+
+	"github.com/AnumaNetwork/anumad/app/appmessage"
+	"github.com/AnumaNetwork/anumad/domain/consensus/utils/mining"
+	"github.com/AnumaNetwork/anumad/util"
+	"github.com/kaspanet/go-secp256k1"
 
 	"github.com/AnumaNetwork/anumad/stability-tests/common"
 	"github.com/AnumaNetwork/anumad/stability-tests/common/rpc"

@@ -1,6 +1,10 @@
 package blockrelay
 
 import (
+	"time"
+
+	"github.com/pkg/errors"
+
 	"github.com/AnumaNetwork/anumad/app/appmessage"
 	"github.com/AnumaNetwork/anumad/app/protocol/common"
 	"github.com/AnumaNetwork/anumad/app/protocol/flowcontext"
@@ -14,7 +18,6 @@ import (
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/hashset"
 	"github.com/AnumaNetwork/anumad/infrastructure/config"
 	"github.com/AnumaNetwork/anumad/infrastructure/network/netadapter/router"
-	"github.com/pkg/errors"
 )
 
 // orphanResolutionRange is the maximum amount of blockLocator hashes
@@ -70,6 +73,16 @@ func HandleRelayInvs(context RelayInvsContext, incomingRoute *router.Route, outg
 }
 
 func (flow *handleRelayInvsFlow) start() error {
+	if time.Now().Before(flow.Config().LaunchDate) {
+		log.Infof("No block relay available before the launch date of the network")
+		log.Infof("Waiting for the launch date of the network: %s", flow.Config().LaunchDate)
+	}
+
+	select {
+	case <-time.After(time.Until(flow.Config().LaunchDate)):
+		log.Infof("Launch date of the network reached. Starting block relay")
+	}
+
 	for {
 		log.Debugf("Waiting for inv")
 		inv, err := flow.readInv()

@@ -1,8 +1,9 @@
 package serialization
 
 import (
-	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
 	"math/big"
+
+	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
 )
 
 // BlockGHOSTDAGDataToDBBlockGHOSTDAGData converts BlockGHOSTDAGData to DbBlockGhostdagData

@@ -11,8 +11,8 @@ import (
 	"github.com/pkg/errors"
 )
 
-// FormatAnum takes the amount of sompis as uint64, and returns amount of ANUM with 8  decimal places
-func FormatAnum(amount uint64) string {
+// FormatSec takes the amount of sompis as uint64, and returns amount of ANUM with 8 decimal places
+func FormatSec(amount uint64) string {
 	res := "                   "
 	if amount > 0 {
 		res = fmt.Sprintf("%19.8f", float64(amount)/constants.SompiPerAnuma)
@@ -20,8 +20,8 @@ func FormatAnum(amount uint64) string {
 	return res
 }
 
-// AnumToSompi takes in a string representation of the Anum value to convert to Sompi
-func AnumToSompi(amount string) (uint64, error) {
+// SecToSompi takes in a string representation of the Sec value to convert to Sompi
+func SecToSompi(amount string) (uint64, error) {
 	err := validateANUMAmountFormat(amount)
 
 	if err != nil {

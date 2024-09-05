@@ -6,7 +6,7 @@ ANUMAD_PID=$!
 
 sleep 1
 
-orphans --simnet -alocalhost:12613 -n20 --profile=7000
+orphans --simnet -alocalhost:16511 -n20 --profile=7000
 TEST_EXIT_CODE=$?
 
 kill $ANUMAD_PID

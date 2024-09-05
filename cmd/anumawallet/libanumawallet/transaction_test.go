@@ -2,11 +2,12 @@ package libanumawallet_test
 
 import (
 	"fmt"
-	"github.com/AnumaNetwork/anumad/domain/consensus/utils/constants"
 	"strings"
 	"testing"
 
 	"github.com/AnumaNetwork/anumad/cmd/anumawallet/libanumawallet"
+	"github.com/AnumaNetwork/anumad/domain/consensus/utils/constants"
+
 	"github.com/AnumaNetwork/anumad/domain/consensus"
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/consensushashing"

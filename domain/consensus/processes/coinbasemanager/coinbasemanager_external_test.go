@@ -1,11 +1,12 @@
 package coinbasemanager_test
 
 import (
+	"testing"
+
 	"github.com/AnumaNetwork/anumad/domain/consensus"
 	"github.com/AnumaNetwork/anumad/domain/consensus/model"
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/testutils"
-	"testing"
 )
 
 func TestExtractCoinbaseDataBlueScoreAndSubsidy(t *testing.T) {

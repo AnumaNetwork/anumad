@@ -2,10 +2,11 @@ package consensusstatemanager_test
 
 import (
 	"fmt"
+	"testing"
+
 	"github.com/AnumaNetwork/anumad/domain/consensus/model"
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/testapi"
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/consensushashing"
-	"testing"
 
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
 

@@ -2,9 +2,10 @@ package blockvalidator_test
 
 import (
 	"errors"
-	"github.com/AnumaNetwork/anumad/domain/consensus/utils/constants"
 	"math/big"
 	"testing"
+
+	"github.com/AnumaNetwork/anumad/domain/consensus/utils/constants"
 
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/blockheader"
 

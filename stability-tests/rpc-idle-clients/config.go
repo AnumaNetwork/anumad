@@ -3,11 +3,11 @@ package main
 import (
 	"path/filepath"
 
-	"github.com/jessevdk/go-flags"
 	"github.com/AnumaNetwork/anumad/infrastructure/config"
 	"github.com/AnumaNetwork/anumad/infrastructure/logger"
 	"github.com/AnumaNetwork/anumad/stability-tests/common"
 	"github.com/AnumaNetwork/anumad/stability-tests/common/rpc"
+	"github.com/jessevdk/go-flags"
 )
 
 const (

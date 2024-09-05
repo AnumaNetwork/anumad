@@ -12,8 +12,8 @@ import (
 	"github.com/AnumaNetwork/anumad/util"
 	"github.com/pkg/errors"
 
-	"github.com/jessevdk/go-flags"
 	"github.com/AnumaNetwork/anumad/version"
+	"github.com/jessevdk/go-flags"
 )
 
 const (

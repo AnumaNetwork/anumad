@@ -3,9 +3,8 @@ package server
 import (
 	"context"
 
-	"github.com/AnumaNetwork/anumad/cmd/anumawallet/libanumawallet"
-
 	"github.com/AnumaNetwork/anumad/cmd/anumawallet/daemon/pb"
+	"github.com/AnumaNetwork/anumad/cmd/anumawallet/libanumawallet"
 )
 
 func (s *server) Sign(_ context.Context, request *pb.SignRequest) (*pb.SignResponse, error) {

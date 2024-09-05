@@ -12,8 +12,8 @@ import (
 
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/consensushashing"
 
-	"github.com/kaspanet/go-secp256k1"
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
+	"github.com/kaspanet/go-secp256k1"
 	"github.com/pkg/errors"
 
 	"github.com/AnumaNetwork/anumad/domain/dagconfig"

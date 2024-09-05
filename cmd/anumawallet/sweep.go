@@ -5,7 +5,6 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"github.com/kaspanet/go-secp256k1"
 	"github.com/AnumaNetwork/anumad/cmd/anumawallet/daemon/client"
 	"github.com/AnumaNetwork/anumad/cmd/anumawallet/daemon/pb"
 	"github.com/AnumaNetwork/anumad/cmd/anumawallet/libanumawallet"
@@ -21,6 +20,7 @@ import (
 	"github.com/AnumaNetwork/anumad/domain/miningmanager/mempool"
 	"github.com/AnumaNetwork/anumad/util"
 	"github.com/AnumaNetwork/anumad/util/txmass"
+	"github.com/kaspanet/go-secp256k1"
 	"github.com/pkg/errors"
 )
 
@@ -116,12 +116,12 @@ func sweep(conf *sweepConfig) error {
 	fmt.Println("\nTransaction ID(s):")
 	for i, txID := range response.TxIDs {
 		fmt.Printf("\t%s\n", txID)
-		fmt.Println("\tSwept:\t", utils.FormatAnum(splitTransactions[i].Outputs[0].Value), " ANUM")
+		fmt.Println("\tSwept:\t", utils.FormatSec(splitTransactions[i].Outputs[0].Value), " ANUM")
 		totalExtracted = totalExtracted + splitTransactions[i].Outputs[0].Value
 	}
 
 	fmt.Println("\nTotal Funds swept (including transaction fees):")
-	fmt.Println("\t", utils.FormatAnum(totalExtracted), " ANUM")
+	fmt.Println("\t", utils.FormatSec(totalExtracted), " ANUM")
 
 	return nil
 }

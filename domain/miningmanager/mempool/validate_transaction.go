@@ -2,6 +2,7 @@ package mempool
 
 import (
 	"fmt"
+
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/constants"
 
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"

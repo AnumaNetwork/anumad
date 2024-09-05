@@ -2,6 +2,9 @@ package blockbuilder
 
 import (
 	"encoding/binary"
+	"math/big"
+	"sort"
+
 	"github.com/AnumaNetwork/anumad/domain/consensus/model"
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/testapi"
@@ -11,8 +14,6 @@ import (
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/txscript"
 	"github.com/AnumaNetwork/anumad/infrastructure/logger"
 	"github.com/pkg/errors"
-	"math/big"
-	"sort"
 )
 
 type testBlockBuilder struct {

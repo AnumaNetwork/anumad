@@ -3,13 +3,14 @@ package main
 import (
 	"encoding/hex"
 	"fmt"
+	"io/ioutil"
+	"strings"
+
 	"github.com/AnumaNetwork/anumad/cmd/anumawallet/libanumawallet/serialization"
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/consensushashing"
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/constants"
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/txscript"
 	"github.com/pkg/errors"
-	"io/ioutil"
-	"strings"
 )
 
 func parse(conf *parseConfig) error {

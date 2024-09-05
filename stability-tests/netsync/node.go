@@ -2,12 +2,13 @@ package main
 
 import (
 	"fmt"
-	"github.com/AnumaNetwork/anumad/domain/consensus"
 	"os/exec"
 	"strings"
 	"sync/atomic"
 	"syscall"
 	"time"
+
+	"github.com/AnumaNetwork/anumad/domain/consensus"
 
 	"github.com/AnumaNetwork/anumad/app/appmessage"
 	"github.com/AnumaNetwork/anumad/stability-tests/common"

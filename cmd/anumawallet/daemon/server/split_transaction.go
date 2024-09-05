@@ -1,10 +1,10 @@
 package server
 
 import (
+	"github.com/AnumaNetwork/anumad/cmd/anumawallet/libanumawallet"
 	"github.com/kaspanet/go-secp256k1"
 	"github.com/pkg/errors"
 
-	"github.com/AnumaNetwork/anumad/cmd/anumawallet/libanumawallet"
 	"github.com/AnumaNetwork/anumad/cmd/anumawallet/libanumawallet/serialization"
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/consensushashing"
@@ -264,7 +264,7 @@ func (s *server) moreUTXOsForMergeTransaction(alreadySelectedUTXOs []*libanumawa
 		if _, ok := alreadySelectedUTXOsMap[*utxo.Outpoint]; ok {
 			continue
 		}
-		if !s.isUTXOSpendable(utxo, dagInfo.VirtualDAAScore) {
+		if !isUTXOSpendable(utxo, dagInfo.VirtualDAAScore, s.params.BlockCoinbaseMaturity) {
 			continue
 		}
 		additionalUTXOs = append(additionalUTXOs, &libanumawallet.UTXO{

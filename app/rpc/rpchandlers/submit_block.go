@@ -2,17 +2,26 @@ package rpchandlers
 
 import (
 	"encoding/json"
+	"time"
+
+	"github.com/pkg/errors"
+
 	"github.com/AnumaNetwork/anumad/app/appmessage"
 	"github.com/AnumaNetwork/anumad/app/protocol/protocolerrors"
 	"github.com/AnumaNetwork/anumad/app/rpc/rpccontext"
 	"github.com/AnumaNetwork/anumad/domain/consensus/ruleerrors"
 	"github.com/AnumaNetwork/anumad/domain/consensus/utils/consensushashing"
 	"github.com/AnumaNetwork/anumad/infrastructure/network/netadapter/router"
-	"github.com/pkg/errors"
 )
 
 // HandleSubmitBlock handles the respectively named RPC command
 func HandleSubmitBlock(context *rpccontext.Context, _ *router.Router, request appmessage.Message) (appmessage.Message, error) {
+	if time.Now().Before(context.Config.LaunchDate) {
+		errorMessage := &appmessage.GetBlockTemplateResponseMessage{}
+		errorMessage.Error = appmessage.RPCErrorf("cannot submit block before the launch date of the network")
+		return errorMessage, nil
+	}
+
 	submitBlockRequest := request.(*appmessage.SubmitBlockRequestMessage)
 
 	var err error

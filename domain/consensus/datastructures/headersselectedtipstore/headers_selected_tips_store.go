@@ -1,11 +1,11 @@
 package headersselectedtipstore
 
 import (
-	"github.com/golang/protobuf/proto"
 	"github.com/AnumaNetwork/anumad/domain/consensus/database/serialization"
 	"github.com/AnumaNetwork/anumad/domain/consensus/model"
 	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
 	"github.com/AnumaNetwork/anumad/util/staging"
+	"github.com/golang/protobuf/proto"
 )
 
 var keyName = []byte("headers-selected-tip")

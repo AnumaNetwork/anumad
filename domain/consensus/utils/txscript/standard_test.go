@@ -6,9 +6,10 @@ package txscript
 
 import (
 	"bytes"
-	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
 	"reflect"
 	"testing"
+
+	"github.com/AnumaNetwork/anumad/domain/consensus/model/externalapi"
 
 	"github.com/AnumaNetwork/anumad/domain/dagconfig"
 	"github.com/AnumaNetwork/anumad/util"
