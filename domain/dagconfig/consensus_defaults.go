@@ -84,7 +84,7 @@ const (
 	// Three days in seconds = 3 * 24 * 60 * 60 = 259200
 	
 	//defaultDeflationaryPhaseDaaScore = 15778800 - 259200
-	defaultDeflationaryPhaseDaaScore = 2000
+	defaultDeflationaryPhaseDaaScore = 1
 
 	defaultMergeDepth = 3600
 )
