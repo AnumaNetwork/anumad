@@ -24,7 +24,7 @@ WORKDIR /app
 
 RUN apk add --no-cache ca-certificates tini
 
-COPY --from=build /go/src/github.com/AnumaNetwork/anumad/anumad /app/
+COPY --from=build /go/src/github.com/AnumaNetwork/anumad /app/
 COPY --from=build /go/src/github.com/AnumaNetwork/anumad/infrastructure/config/sample-anumad.conf /app/
 
 USER nobody
